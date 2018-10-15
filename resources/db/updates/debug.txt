@@ -1,0 +1,23 @@
+----------------------
+Apr 03, 2014 [Thu]
+----------------------
+EXPLAIN
+SELECT 
+	DATE_FORMAT(d.time_visit, "%h:%i %p") AS time_visit, 
+	DATE_FORMAT(d.date_visit, "%Y-%m-%d") AS date_visit, 
+	DATE_FORMAT(p.date_created, "%h:%i %p") AS time_created, 
+	DATE_FORMAT(p.date_created, "%Y-%m-%d") AS date_created, 
+	`p`.`id`, 
+	`p`.`firstname`, 
+	`p`.`lastname` 
+FROM 
+	(`patient` AS p) 
+LEFT JOIN `patient_details` AS d 
+	ON `p`.`id` = `d`.`patient_id` 
+WHERE 
+	DATE_FORMAT(d.date_visit, '%Y-%m-%d') = '2014-04-03' 
+OR 
+	DATE_FORMAT(p.date_created, '%Y-%m-%d') = '2014-04-03' 
+ORDER BY 
+	`d`.`date_visit` desc, 
+	`d`.`time_visit` desc;

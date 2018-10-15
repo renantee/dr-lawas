@@ -1,0 +1,13 @@
+---------------
+Apr 03, 2014
+---------------
+> My Patients
+  = need to add submenu "Search Patient"
+     - this is to ignore going to "Patient List" 'coz it loads slowly as number of patients increases
+  * Status: Work-in-progress
+
+> Settings
+  = need to add configuration for "Receipt Margin"
+     - to have a dynamic values for margins
+  * Status: Work-in-progress
+  
