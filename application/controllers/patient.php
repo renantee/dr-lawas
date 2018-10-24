@@ -159,7 +159,6 @@ class Patient extends CI_Controller {
 			$data[] = array(
 				$count,
 				$patient->firstname,
-				$patient->middlename,
 				$patient->lastname,
 				$patient->sex=='m' ? 'Male' : 'Female',
 				$patient->birthdate,

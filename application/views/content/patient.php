@@ -14,11 +14,10 @@
 				<tr class="show_hide_container4">
 					<th>#</th>
 					<th align="left">Firstname</th>
-					<th align="left">Middlename</th>
 					<th align="left">Lastname</th>
 					<th align="left">Sex</th>
 					<th align="left">Date of Birth</th>
-					<th>Action</th>
+					<th style="text-align:center;">Action</th>
 				</tr>
 			</thead>
 			<tbody>

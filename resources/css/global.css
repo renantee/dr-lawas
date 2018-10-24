@@ -1193,10 +1193,9 @@ body {
 	color: #ffffff;
 }
 .show_hide_right4{
-	width: 180px;
+	width: auto;
 	height: 35px;
-	float: right;
-	text-align: center;
+	text-align: left;
 	line-height: 35px;
 }
 .tablelist{

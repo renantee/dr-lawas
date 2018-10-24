@@ -2,16 +2,19 @@
 Oct 24, 2018 [Wed]
 ------------------
 < Patient Management System >  
-  => My Patients
+  => My Patients (DONE)
 	 - working on the following items:
-	   > Patient List: Optimize Loading Performance
+	   > Patient List: Optimize Loading Performance (done)
+	   > Update main layout (done)
+	   > Added new css and js (done)
 
 	 - reference sites:
 	   > Using Datatables with CodeIgniter Tutorial = https://www.patchesoft.com/using-datatables-with-codeigniter-tutorial/
 
 	 - pages are visible here:
-	   > Patient list = http://localhost/dr-lawas/patient
 	   > Test optimized datatable = http://localhost/dr-lawas/patient/test
+	   > Patient list = http://localhost/dr-lawas/patient
+	   > View patient details = http://localhost/dr-lawas/patient/view/1	   
 
 	 - modified files:
 	   > application/controllers/patient.php
@@ -26,6 +29,7 @@ Oct 24, 2018 [Wed]
 	   > resources/css/fonts/glyphicons-halflings-regular.ttf
 	   > resources/css/fonts/glyphicons-halflings-regular.woff
 	   > resources/css/fonts/glyphicons-halflings-regular.woff2
+	   > resources/css/global.css
 	   > resources/css/new/bootstrap.min.css
 	   > resources/css/new/dataTables.bootstrap.min.css
 	   > resources/js/new/dataTables.bootstrap.min.js
@@ -34,10 +38,10 @@ Oct 24, 2018 [Wed]
 
 	 - commit changes:
 	   > Patient List: Optimize Loading Performance (Initial Update)
+	   > Patient List: Optimize Loading Performance (Updated)
 
-	 *Remarks: 
+	 *Remarks: Tested and verified locally.
 	 *Notes:
-	  a. 
 	 *Trello: https://trello.com/c/brNEpwox  
 
 
