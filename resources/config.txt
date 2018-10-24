@@ -1,1 +1,1 @@
-{"header":"resources\/img\/receipt\/header.png","rx":"resources\/img\/receipt\/rx.jpg","license":"094634","ptr":"4833498","tin":"223-640-145"}
+{"header":"resources\/img\/receipt\/header.png","rx":"resources\/img\/receipt\/rx.jpg","license":"0094634","ptr":"186806","tin":"223-640-145"}
