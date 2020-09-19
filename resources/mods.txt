@@ -1,13 +1,60 @@
----------------
-Apr 03, 2014
----------------
+------------------
+Oct 24, 2018 [Wed]
+------------------
+< Patient Management System >  
+  => My Patients (DONE)
+	 - working on the following items:
+	   > Patient List: Optimize Loading Performance (done)
+	   > Update main layout (done)
+	   > Added new css and js (done)
+
+	 - reference sites:
+	   > Using Datatables with CodeIgniter Tutorial = https://www.patchesoft.com/using-datatables-with-codeigniter-tutorial/
+
+	 - pages are visible here:
+	   > Test optimized datatable = http://localhost/dr-lawas/patient/test
+	   > Patient list = http://localhost/dr-lawas/patient
+	   > View patient details = http://localhost/dr-lawas/patient/view/1	   
+
+	 - modified files:
+	   > application/controllers/patient.php
+	   > application/layouts/main.php
+	   > application/models/Patientmodel.php
+	   > application/views/content/patient.php
+	   > resources/config.txt
+	   > resources/mods.txt
+
+	 - added files:
+	   > application/views/patients.php
+	   > resources/css/fonts/glyphicons-halflings-regular.ttf
+	   > resources/css/fonts/glyphicons-halflings-regular.woff
+	   > resources/css/fonts/glyphicons-halflings-regular.woff2
+	   > resources/css/global.css
+	   > resources/css/new/bootstrap.min.css
+	   > resources/css/new/dataTables.bootstrap.min.css
+	   > resources/js/new/dataTables.bootstrap.min.js
+	   > resources/js/new/datatables.min.js
+	   > resources/js/new/jquery.min.js
+
+	 - commit changes:
+	   > Patient List: Optimize Loading Performance (Initial Update)
+	   > Patient List: Optimize Loading Performance (Updated)
+
+	 *Remarks: Tested and verified locally.
+	 *Notes:
+	 *Trello: https://trello.com/c/brNEpwox  
+
+
+------------------
+Apr 03, 2014 [Thu]
+------------------
 > My Patients
   = need to add submenu "Search Patient"
-     - this is to ignore going to "Patient List" 'coz it loads slowly as number of patients increases
+    - this is to ignore going to "Patient List" 'coz it loads slowly as number of patients increases
   * Status: Work-in-progress
 
 > Settings
   = need to add configuration for "Receipt Margin"
-     - to have a dynamic values for margins
+    - to have a dynamic values for margins
   * Status: Work-in-progress
   

@@ -26,11 +26,12 @@ class Patientmodel extends CI_Model {
 			$query = $this->db->get();
 		}
 		else {
+			$this->db->where("firstname <> '' OR lastname <> ''");
 			$this->db->order_by('date_created', 'desc');
 			$query = $this->db->get($this->table);
 		}
 		
-        return $query->result();
+        return $query;
 	}
 	
 	function get_patient_info($id) {

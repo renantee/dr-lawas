@@ -52,14 +52,15 @@ class Patient extends CI_Controller {
 					
 				default:
 			}
-		}
-		$this->data['patients'] = $this->patient->get_patients();
-		
+		}		
+		// this will be the reference that the page loaded is "Patient List"
+		$this->data['page'] = 'patient-list';
+
 		$this->load->view('content/patient', $this->data);
 	}
 	
 	public function today() {		
-		$this->data['patients'] = $this->patient->get_patients(date('Y-m-d'));
+		$this->data['patients'] = $this->patient->get_patients(date('Y-m-d'))->result();
 		
 		$this->load->view('content/patient-today', $this->data);
 	}
@@ -111,7 +112,7 @@ class Patient extends CI_Controller {
 				
 				// patient's medicine
 				$this->data['patient_medicine'] = $this->patient->get_patient_medicine($visit);
-								
+
 				$this->load->view('content/patient-edit-visit', $this->data);
 				break;
 				
@@ -131,6 +132,56 @@ class Patient extends CI_Controller {
 				
 				$this->load->view('content/patient-visit', $this->data);
 		}
+	}
+
+	// List all patients
+	public function ajax() {
+		// Datatables Variables
+		$draw = intval($this->input->get("draw"));
+		$start = intval($this->input->get("start"));
+		$length = intval($this->input->get("length"));
+
+		$patients = $this->patient->get_patients();
+
+		$data = array();
+
+		$count = 0;
+		foreach($patients->result() as $patient) {			
+			$action = '
+				<div class="show_hide_right4">
+					<a class="link_show_hide" href="' . site_url('patient/edit/'. $patient->id) . '">Edit Info</a>  |
+					<a class="link_show_hide" href="' . site_url('patient/view/'. $patient->id) . '">View Details</a> |
+					<a class="link_show_hide" href="' . site_url('patient/visit/'. $patient->id) . '">Add Visit</a>
+				</div>
+			';
+
+			$count++;
+			$data[] = array(
+				$count,
+				$patient->firstname,
+				$patient->lastname,
+				$patient->sex=='m' ? 'Male' : 'Female',
+				$patient->birthdate,
+				$action
+			);
+		}
+
+		$output = array(
+			"draw" => 1,
+			"recordsTotal" => $patients->num_rows(),
+			"recordsFiltered" => $patients->num_rows(),
+			"data" => $data
+		);
+
+		echo json_encode($output);
+		exit();
+	}
+
+	// Test new list of patient(s)
+	public function test()
+	{
+		$this->layout = "No";
+		$this->load->view("patients", array());
 	}
 }
 ?>
